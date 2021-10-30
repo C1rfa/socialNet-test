@@ -1,0 +1,82 @@
+.userInfo
+    grid-area: content
+    display: grid
+    grid-template-areas: "col1 col2"
+    grid-template-columns: 250px 1fr
+    grid-gap: 10px
+    flex-grow: 1
+    width: 100%
+    &__col1
+        margin-top: 5px
+        grid-area: col1
+        display: block
+    &__avatar
+        height: 200px 
+        width: 250px
+    &__image
+        border-radius: 10px
+        height: 100%
+        width: 100%
+    &__col2
+        margin-top: 5px
+        grid-area: col2
+        display: block
+    &__info
+        height: 200px
+        border-radius: 10px
+        padding: 10px
+        margin-bottom: 5px
+    &__additional
+        padding: 10px
+        border-radius: 10px
+        margin-bottom: 5px
+    &__block
+        display: block
+        text-align: left
+    &__title
+        margin: 0
+        color: #ffffff
+        font-size: 40px 
+        +Montseratt
+    &__subtitle
+        color: #07b4c0
+        font-size: 14px
+        +Montseratt 
+    &__divider
+        margin-top: 5px
+        margin-bottom: 5px
+        display: flex
+        background-color: #ffffff
+        height: 1px
+        border-radius: 20px
+        width: 100%
+    &__row
+        display: flex
+        align-items: center
+    &__item
+        flex-basis: 50%
+        display: flex
+        justify-content: flex-start
+    &__category
+        font-size: 14px
+        color: #ffffff
+        +NunitoSans
+
+    &__expand                                                           //СТИЛЬ ДЛЯ КНОПКИ РАСШИРЕНИЯ БИО-ДАННЫХ ХЗ КОГДА СДЕЛАЮ (и сделаю ли) НО ОСТАВЛЮ
+        flex-grow: 1
+        border: none
+        background: Transparent
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 10px
+        &:active, &:focus
+            outline: none
+        &:hover
+            background: #07b4c0
+
+.info
+    display: flex
+    justify-content: flex-start
+    flex-direction: column
+    background-color: #463636        

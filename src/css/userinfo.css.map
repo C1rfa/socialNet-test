@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACL,OAAO,EAAE,IAAI;EACb,mBAAmB,EAAE,WAAW;EAChC,qBAAqB,EAAE,SAAS;CAYR;;AAXvB,AAAD,cAAO,CAAC;EACJ,SAAS,EAAE,IAAI;CAAG;;AACrB,AAAD,gBAAS,CAAC;EACN,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,iBAAiB;CAAG;;AAC/B,AAAD,eAAQ,CAAC;EACL,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,MAAM;CAAG;;AACxB,AAAD,cAAO,CAAC;EACJ,SAAS,EAAE,IAAI;CAAG",
+    "sources": [
+        "../components/profile page/profile userInfo/userinfo.sass"
+    ],
+    "names": [],
+    "file": "userinfo.css"
+}

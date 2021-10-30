@@ -1,0 +1,26 @@
+.profile {
+  display: grid;
+  grid-template-areas: "col1 col2";
+  grid-template-columns: 150px 1fr;
+}
+
+.profile__col1 {
+  grid-area: col1;
+}
+
+.profile__avatar {
+  height: 200px;
+  width: 100px;
+  border: 2px solid #ee2e2e;
+}
+
+.profile__image {
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+}
+
+.profile__col2 {
+  grid-area: col2;
+}
+/*# sourceMappingURL=userinfo.css.map */

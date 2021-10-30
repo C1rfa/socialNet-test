@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Montserrat Medium';
+    src: url('../fonts/Montserrat-Medium.eot');
+    src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+
+@font-face {
+        font-family: 'NunitoSans Regular';
+        src: url('../fonts/NunitoSans-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }       
+
+
+@mixin Montseratt {
+        font-family: 'Montserrat Medium', sans-serif;
+}
+
+@mixin NunitoSans {
+    font-family: 'NunitoSans Regular', sans-serif;
+}

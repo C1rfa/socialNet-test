@@ -1,0 +1,600 @@
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "header header" "nav content";
+  grid-template-rows: 1fr;
+  grid-template-columns: 150px 1fr;
+}
+
+body {
+  background-color: #332828 !important;
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url("../fonts/Montserrat-Medium.eot");
+  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NunitoSans Regular';
+  src: url("../fonts/NunitoSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.nav__items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nav__items:hover {
+  border-radius: 5px;
+  background-color: #584d4d;
+}
+
+.nav__items span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.nav__icon {
+  margin-right: 5px;
+}
+
+.nav__link {
+  font-size: 14px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.nav__link__active {
+  color: #25d4e0 !important;
+}
+
+.header {
+  display: grid;
+  grid-template-areas: "logo search";
+  grid-template-columns: 20%;
+  grid-area: header;
+  min-height: 100px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #000000;
+  background-color: #ffffff;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.post {
+  flex-grow: 1;
+  margin-top: 5px;
+}
+
+.post__form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.post__input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.post__input:focus, .post__input:active {
+  outline: none;
+}
+
+.post__btn {
+  cursor: pointer;
+  background: #16afc4;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: 'NunitoSans Regular', sans-serif;
+}
+
+.post__btn:focus, .post__btn:active {
+  outline: none;
+}
+
+.post__item {
+  display: block;
+  background-color: #463636;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.post__title {
+  align-items: center;
+  display: flex;
+}
+
+.post__buttons {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  flex-grow: 1;
+}
+
+.post__delete {
+  border: none;
+  background: transparent;
+}
+
+.post__edit {
+  border: none;
+  background: transparent;
+}
+
+.post__previousVers {
+  border: none;
+  background: transparent;
+}
+
+.post__body {
+  display: flex;
+  margin-top: 10px;
+}
+
+.post__input {
+  width: 80%;
+  height: 100%;
+  resize: vertical;
+  border: none;
+  background-color: #463636;
+  color: #ffffff;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.post__input:focus, .post__input:active {
+  outline: none;
+}
+
+.post__ok {
+  width: 20%;
+  border: none;
+  background: #16afc4;
+  border-radius: 0 10px 10px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.post__ok:focus, .post__ok:active {
+  outline: none;
+}
+
+.post__footer {
+  display: flex;
+  align-items: center;
+}
+
+.post__row {
+  display: block;
+  margin-left: 10px;
+}
+
+.post__name {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.post__date {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: 'NunitoSans Regular', sans-serif;
+}
+
+.post__text {
+  word-break: break-all;
+  display: block;
+  white-space: pre-wrap;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.post__like {
+  vertical-align: middle;
+  margin-left: 2px;
+  font-size: 12px;
+  color: #ffffff;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.post__icon {
+  vertical-align: middle;
+}
+
+.post__like-button {
+  background-color: transparent;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+.post__like-button:focus {
+  outline: none;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.friends {
+  background-color: #463636;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  width: 250px;
+}
+
+.friends__item {
+  position: relative;
+  display: block;
+  margin-top: 5px;
+  flex-basis: 25%;
+}
+
+.friends__link {
+  text-decoration: none !important;
+}
+
+.friends__name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  font-family: 'NunitoSans Regular', sans-serif;
+}
+
+.friends__wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.friends__avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.userInfo {
+  grid-area: content;
+  display: grid;
+  grid-template-areas: "col1 col2";
+  grid-template-columns: 250px 1fr;
+  grid-gap: 10px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.userInfo__col1 {
+  margin-top: 5px;
+  grid-area: col1;
+  display: block;
+}
+
+.userInfo__avatar {
+  height: 200px;
+  width: 250px;
+}
+
+.userInfo__image {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.userInfo__col2 {
+  margin-top: 5px;
+  grid-area: col2;
+  display: block;
+}
+
+.userInfo__info {
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.userInfo__additional {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.userInfo__block {
+  display: block;
+  text-align: left;
+}
+
+.userInfo__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 40px;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.userInfo__subtitle {
+  color: #07b4c0;
+  font-size: 14px;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.userInfo__divider {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  background-color: #ffffff;
+  height: 1px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.userInfo__row {
+  display: flex;
+  align-items: center;
+}
+
+.userInfo__item {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.userInfo__category {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: 'NunitoSans Regular', sans-serif;
+}
+
+.userInfo__expand {
+  flex-grow: 1;
+  border: none;
+  background: Transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.userInfo__expand:active, .userInfo__expand:focus {
+  outline: none;
+}
+
+.userInfo__expand:hover {
+  background: #07b4c0;
+}
+
+.info {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: #463636;
+}
+
+.dialogs {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "contacts messages";
+}
+
+.contacts {
+  grid-area: contacts;
+  display: block;
+}
+
+.contacts__header {
+  margin: 5px;
+}
+
+.contacts__header span {
+  border: none;
+  background-color: transparent;
+}
+
+.contacts__header input {
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.contacts__row {
+  width: 210px;
+  display: block;
+  margin: 5px;
+}
+
+.contacts__body {
+  overflow-x: auto;
+  height: 550px;
+}
+
+.contacts__item {
+  position: relative;
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #463636;
+}
+
+.contacts__item__active {
+  background-color: #07b4c0;
+}
+
+.contacts__item__active .contacts__name {
+  color: #000000;
+}
+
+.contacts__item__active .contacts__lastMessage {
+  color: #ffffff;
+}
+
+.contacts__link {
+  display: flex;
+  padding: 10px;
+  border-radius: 20px;
+  text-decoration: none !important;
+}
+
+.contacts__link__wrap {
+  position: absolute;
+  width: 97%;
+  height: 100%;
+  z-index: 1;
+}
+
+.contacts__avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.contacts__name {
+  font-size: 14px;
+  color: #a1a0a0;
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.contacts__lastMessage {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 80%;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: #e9e1e1;
+  font-family: 'NunitoSans Regular', sans-serif;
+}
+
+.messages {
+  grid-area: messages;
+  display: block;
+}
+
+.messages__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  height: 550px;
+}
+
+.messages__footer {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.messages__footer textarea {
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  padding-left: 10px;
+  width: 80%;
+  height: 80px;
+}
+
+.messages__footer textarea:active, .messages__footer textarea:focus {
+  outline: none;
+}
+
+.messages__footer button {
+  text-transform: uppercase;
+  background-color: #07b4c0;
+  border: none;
+  height: 80px;
+  width: 20%;
+  border-radius: 0 10px 10px 0;
+}
+
+.messages__item {
+  padding: 10px;
+  margin: 5px;
+  background-color: #6b5353;
+  border-radius: 20px;
+}
+
+.messages__row {
+  align-items: center;
+  display: flex;
+}
+
+.messages__avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.messages__name {
+  margin-left: 10px;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.messages__time {
+  color: #0cbea1;
+  margin-left: 10px;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.messages__text {
+  overflow: hidden;
+  display: block;
+  margin-top: 5px;
+  color: #e9e9e9;
+  font-size: 14px;
+  font-family: 'NunitoSans Regular', sans-serif;
+}
+
+.users {
+  display: block;
+}
+
+.users .items {
+  display: flex;
+  flex-direction: row;
+}
+/*# sourceMappingURL=style.css.map */

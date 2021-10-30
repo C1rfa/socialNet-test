@@ -1,0 +1,25 @@
+.nav
+    grid-area: nav
+    &__items
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        &:hover
+            border-radius: 5px
+            background-color: #584d4d
+        span
+            position: absolute
+            width: 100%
+            height: 100%
+            z-index: 1
+    &__icon
+        margin-right: 5px
+    &__link
+        font-size: 14px
+        color: #ffffff !important
+        text-decoration: none !important
+        +Montseratt
+        &__active
+            color: #25d4e0 !important
+        

@@ -1,0 +1,131 @@
+.dialogs
+    grid-area: content
+    display: grid
+    grid-template-columns: 300px 1fr
+    grid-template-areas: "contacts messages"
+
+.contacts
+    grid-area: contacts
+    display: block
+    
+    &__header
+        margin: 5px
+        span
+            border: none
+            background-color: transparent
+        input
+            width: 100%
+            padding: 5px 10px 5px 10px
+            border: none
+            border-radius: 10px
+            &:focus, &:active
+            outline: none    
+            +Montseratt
+    &__row
+        width: 210px
+        display: block
+        margin: 5px
+    &__body
+        overflow-x: auto
+        height: 550px
+    &__item
+        position: relative
+        margin: 5px
+        border-radius: 20px
+        background-color: #463636
+        &__active
+            background-color: #07b4c0
+            .contacts
+                &__name
+                    color: #000000
+                &__lastMessage
+                    color: #ffffff
+    &__link
+        display: flex
+        padding: 10px
+        border-radius: 20px
+        text-decoration: none !important
+        &__wrap
+            position: absolute
+            width: 97%
+            height: 100%
+            z-index: 1
+    &__avatar
+        border-radius: 50%
+        width: 50px
+        height: 50px
+    &__name
+        font-size: 14px 
+        color: #a1a0a0
+        display: block
+        margin-bottom: 5px
+        +Montseratt
+             
+    &__lastMessage
+        display: block
+        white-space: nowrap
+        overflow: hidden
+        max-width: 80%
+        text-overflow: ellipsis
+        font-size: 14px
+        color: #e9e1e1
+        +NunitoSans
+
+.messages
+    grid-area: messages
+    display: block
+    &__body
+        display: flex
+        flex: 1 1 auto
+        flex-direction: column-reverse
+        overflow-y: auto
+        height: 550px
+    &__footer
+        margin: 5px
+        display: flex
+        justify-content: center
+        align-items: center
+        textarea
+            border: none
+            border-radius: 10px 0px 0px 10px
+            padding-left: 10px
+            width: 80%
+            height: 80px
+            &:active, &:focus
+                outline: none
+        button
+            text-transform: uppercase
+            background-color: #07b4c0
+            border: none
+            height: 80px
+            width: 20%
+            border-radius: 0 10px 10px 0
+    &__item
+        padding: 10px
+        margin: 5px
+        background-color: #6b5353
+        border-radius: 20px
+    &__row
+        align-items: center
+        display: flex
+    &__avatar
+        border-radius: 50%
+        width: 50px
+        height: 50px
+    &__name
+        margin-left: 10px
+        +Montseratt
+    &__time
+        color: #0cbea1
+        margin-left: 10px
+        +Montseratt
+    &__text
+        overflow: hidden
+        display: block
+        word-break: break-all
+        white-space: pre-wrap
+        margin-top: 5px
+        color: #e9e9e9
+        font-size: 14px 
+        +NunitoSans
+
